@@ -27,7 +27,7 @@ class Owner
   end
 
   def cats
-    @@pets.cat
+    self.cat
   end
 
 end
