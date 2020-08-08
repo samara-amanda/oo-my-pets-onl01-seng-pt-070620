@@ -27,7 +27,7 @@ class Owner
   end
 
   def cats
-    @@pets[1]
+    @@pets
   end
 
 end
