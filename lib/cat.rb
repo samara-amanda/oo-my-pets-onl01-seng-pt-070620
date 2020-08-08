@@ -1,4 +1,4 @@
-class Dog
+class Cat
   attr_reader :name
   attr_accessor :mood
 
@@ -6,5 +6,4 @@ class Dog
     @name = name
     @mood = "nervous"
   end
-
 end
