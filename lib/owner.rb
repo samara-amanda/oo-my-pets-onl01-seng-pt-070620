@@ -27,7 +27,7 @@ class Owner
   end
 
   def cats
-    Cats.all.new
+    Cat.all.new
   end
 
 end
