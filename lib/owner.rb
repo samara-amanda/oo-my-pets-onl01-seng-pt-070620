@@ -8,7 +8,6 @@ class Owner
   def initialize(name= "Beckham", species="human")
     @species = species
     @name = name
-    @pets = {dogs: [], cats: []}
     save
   end
 
@@ -54,7 +53,7 @@ class Owner
 
   def walk_dogs
     @pets[:dogs].each do |dog|
-      mood = "happy"
+      Dog.mood = "happy"
     end
   end
 
