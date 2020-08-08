@@ -31,10 +31,6 @@ class Owner
     @@pets
   end
 
-  def buy_fish(fish)
-    @@pets[:fishes] << Fish.new(fish)
-  end
-
   def buy_cat(cat)
     @@pets[:cats] << Cat.new(cat)
   end
@@ -55,9 +51,9 @@ class Owner
     end
   end
 
-  def feed_fish
-    @@pets[:fishes].each do |fish|
-      fish.mood = 'happy'
+  def feed_cat
+    @@pets[:cat].each do |cat|
+      cat.mood = 'happy'
     end
   end
 
