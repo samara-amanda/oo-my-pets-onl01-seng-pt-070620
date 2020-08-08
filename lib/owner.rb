@@ -39,7 +39,7 @@ class Owner
   end
 
   def buy_cat(cat)
-    self.cat.count
+    @@pets[:cats] << Cat.new(cat)
   end
 
 end
