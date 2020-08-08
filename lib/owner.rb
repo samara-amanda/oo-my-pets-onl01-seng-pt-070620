@@ -25,7 +25,7 @@ class Owner
   end
 
   def self.reset_all
-    @@all.clear
+    @@all = []
   end
 
   def say_species
