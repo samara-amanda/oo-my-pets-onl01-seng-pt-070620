@@ -30,4 +30,8 @@ class Owner
     Cat.all
   end
 
+  def dogs
+    Dog.all
+  end
+
 end
