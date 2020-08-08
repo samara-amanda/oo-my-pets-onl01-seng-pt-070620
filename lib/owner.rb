@@ -29,7 +29,7 @@ class Owner
 
   def cats
     Cat.all.select do |cat|
-      cat.name == self
+      cat.owner == self
     end
   end
 
@@ -40,7 +40,7 @@ class Owner
   end
 
   def buy_cat(cat)
-    @@pets[:cats] << Cat.new(cat)
+    self.cat.count
   end
 
 end
