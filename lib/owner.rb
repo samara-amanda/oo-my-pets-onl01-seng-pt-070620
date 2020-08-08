@@ -48,4 +48,8 @@ class Owner
     dog = Dog.new(name, self)
   end
 
+  def walk_dog(mood)
+    dog_mood = Dog.mood("happy")
+  end
+
 end
