@@ -67,7 +67,7 @@ class Owner
       arr.map do |pet|
         pet.mood = "nervous"
       end
-      arr.clears
+      arr.clear
     end
   end
 
