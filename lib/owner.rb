@@ -27,7 +27,7 @@ class Owner
   end
 
   def cats
-    self.cat.all
+    self.all
   end
 
 end
