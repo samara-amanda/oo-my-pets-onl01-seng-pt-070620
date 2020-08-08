@@ -1,73 +1,70 @@
 class Owner
-  attr_reader :species
-  attr_accessor :name, :pets, :fish, :dog, :cat
+OWNERS = []
+attr_accessor :name, :pets
+attr_reader :species
 
-  @@all = []
-  @@pets = {:fishes => [], :dogs => [], :cats => []}
+def initialize(species)
+  @species = species
+  OWNERS << self
+  @pets = {:fishes => [], :dogs => [], :cats => []}
+end
 
-  def initialize(species)
-    @species = species
-    @name = name
-    @@all << self
+def self.all ##Do we have to use this if we use a class variable? @@all
+OWNERS
+end
+
+def self.reset_all
+OWNERS.clear
+end
+
+def self.count
+OWNERS.size
+end
+
+def species
+  @species
+end
+
+def say_species
+  return "I am a #{species}"
+end
+
+def name
+  @name #where did we set @name = name?
+end
+
+def buy_fish(name)
+  pets[:fishes] << Fish.new(name) #how does owner.rb know where fish.rb is?
+end
+
+def buy_cat(name)
+  pets[:cats] << Cat.new(name)
+end
+
+def buy_dog(name)
+  pets[:dogs] << Dog.new(name)
+end
+
+def walk_dogs
+  pets[:dog].each do |dog|
+    dog.mood = "happy"
   end
+end
 
-  def self.all
-    @@all
+def play_with_cats
+  pets[:cats].each do |cat|
+  cat.mood = "Happy"
   end
+end
 
-  def self.count
-    @@all.length
+def feed_fish
+  pets[:fish].each do |fish|
+  fish.mood = "happy"
   end
+end
 
-  def self.reset_all
-    @@all.clear
-  end
-
-  def say_species
-    "I am a #{@species}."
-  end
-
-  def pets
-    @@pets
-  end
-
-  def buy_cat(cat)
-    @@pets[:cats] << Cat.new(cat)
-  end
-
-  def buy_dog(dog)
-    @@pets[:dogs] << Dog.new(dog)
-  end
-
-  def walk_dogs
-    @@pets[:dogs].each do |dog|
-      dog.mood = 'happy'
-    end
-  end
-
-  def play_with_cats
-    @@pets[:cats].each do |cat|
-      cat.mood = 'happy'
-    end
-  end
-
-  def feed_cat
-    @@pets[:cat].each do |cat|
-      cat.mood = 'happy'
-    end
-  end
-
-  def list_pets
-    "I have #{pets[:fishes].length} fish, #{pets[:dogs].length} dog(s), and #{pets[:cats].length} cat(s)."
-  end
-
-  def sell_pets
-    pets.each do |pet, arr|
-      arr.map do |pet|
-        pet.mood = 'nervous'
-      end
-      arr.clear
-    end
-  end
+def list_pets
+  "I have #{pets[:fishes].count} fish. I have #{pets[:cats].count} cats. I have #{pets[:dogs].count} dogs."
+end
 
 end
