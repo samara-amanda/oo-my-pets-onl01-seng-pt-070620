@@ -54,15 +54,10 @@ class Owner
     end
   end
 
-
   def feed_cats
     @pets[:cats].each do |fish|
       fish.mood = 'happy'
     end
-  end
-
-  def list_pets
-    "I have #{pets[:dogs].length} dog(s), and #{pets[:cats].length} cat(s)."
   end
 
   def sell_pets
@@ -72,6 +67,10 @@ class Owner
       end
       arr.clear
     end
+  end
+
+  def list_pets
+    "I have #{pets[:dogs].length} dog(s), and #{pets[:cats].length} cat(s)."
   end
 
 end
