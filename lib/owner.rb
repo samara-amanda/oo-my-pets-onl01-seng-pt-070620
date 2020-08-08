@@ -27,7 +27,8 @@ class Owner
   end
 
   def cats
-    Cat.all.find do {|cat| cat.all == cat}
+      Cat.all.find do {|cat| cat.all == cat}
+      end
   end
 
   def dogs
