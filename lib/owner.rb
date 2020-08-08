@@ -26,8 +26,8 @@ class Owner
     "I am a #{@species}."
   end
 
-  def pets
-    @@pets
+  def cats
+    Cats.all.new
   end
 
 end
