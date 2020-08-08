@@ -30,3 +30,4 @@ class Owner
   def pets
     @@pets
   end
+end
