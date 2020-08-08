@@ -50,13 +50,13 @@ class Owner
 
   def walk_dogs
     @pets[:dogs].each do |dog|
-      dog.mood = "happy"
+      dog.mood == "happy"
     end
   end
 
   def feed_cats
-    @pets[:cats].each do |fish|
-      fish.mood = 'happy'
+    @pets[:cats].each do |cat|
+      cat.mood == 'happy'
     end
   end
 
