@@ -27,7 +27,7 @@ class Owner
   end
 
   def self.cats
-    Cat.all
+    @@pets[1]
   end
 
 end
