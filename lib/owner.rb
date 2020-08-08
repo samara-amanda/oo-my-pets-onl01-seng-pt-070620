@@ -27,7 +27,7 @@ class Owner
   end
 
   def cats
-    Cat.all.find do |cat|
+    Cat.all.select do |cat|
       cat.name == self
     end
   end
