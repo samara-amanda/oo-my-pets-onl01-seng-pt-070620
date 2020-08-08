@@ -1,6 +1,6 @@
 class Owner
   attr_reader :species
-  attr_accessor :name :pets
+  attr_accessor :name, :pets
 
   @@all = []
 
